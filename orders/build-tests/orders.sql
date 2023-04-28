@@ -183,9 +183,14 @@ SELECT 'END DEFAULT ORDER/ORDER_ITEM Build out', `current_timestamp`();
 SELECT "SETTING TEZ SMALL-FILE CONFIGS";
 
 -- Create Small Files
+-- SET tez.grouping.min-size=50000;
+-- SET tez.grouping.max-size=100000;
+-- SET tez.grouping.split-waves=1000;
 SET tez.grouping.min-size=50000;
-SET tez.grouping.max-size=100000;
-SET tez.grouping.split-waves=1000;
+--SET tez.grouping.max-size=100000;
+SET tez.grouping.max-size=1000000;
+SET tez.grouping.split-waves=150;
+
 
 SELECT 'START EXPLAIN SMALL_FILE ORDER/ORDER_ITEM Build out', `current_timestamp`();
 
