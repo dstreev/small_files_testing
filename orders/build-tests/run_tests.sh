@@ -40,8 +40,8 @@ for ag in ${auto_gather[@]}; do
         storage_id="${tmpServerArray[0]}"
         external_db_location="${tmpServerArray[1]}${DB}_${ft}.db"
         managed_db_location="${tmpServerArray[2]}${DB}_${ft}.db"
-        external_scratchdir="${tmpServerArray[1]}/scratch_dir"
-        managed_scratchdir="${tmpServerArray[2]}/scratch_dir"
+        external_scratchdir="${tmpServerArray[1]}scratch_dir"
+        managed_scratchdir="${tmpServerArray[2]}scratch_dir"
       fi
 
       for LEGACY in ${legacies[@]}; do
